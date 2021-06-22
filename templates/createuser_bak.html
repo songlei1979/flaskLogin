@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Create User</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+<link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Passion+One" type="text/css">
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Oxygen" type="text/css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+</head>
+<body style="background-color: #ccc;">
+    <div class="container">
+        <div class="row main">
+            <div class="main-login main-center">
+                <h5>Create User</h5>
+                <form action="{{ url_for('createuser') }}" method="post" autocomplete="off">
+                    <div class="form-group">
+                        <label for="name" class="cols-sm-2 control-label">Name:</label>
+                        <div class="cols-sm-10">
+                            <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+                            <input type="text" class="form-control" name="fullname" id="fullname" placeholder="Fullname" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="username" class="cols-sm-2 control-label">Username:</label>
+                        <div class="cols-sm-10">
+                            <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+                            <input type="text" class="form-control" name="username" id="username" placeholder="Username" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="password" class="cols-sm-2 control-label">Password:</label>
+                        <div class="cols-sm-10">
+                            <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+                            <input type="password" class="form-control" name="password" id="password" placeholder="Password" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div id="msg">{{ msg }}</div>
+                        <input type="submit" value="Create" class="form-control btn btn-primary" name="">
+
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
